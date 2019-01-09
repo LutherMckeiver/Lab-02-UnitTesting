@@ -1,5 +1,6 @@
 ﻿using System;
 
+
 namespace Lab_02_UnitTesting
 {
     class Program
@@ -8,17 +9,40 @@ namespace Lab_02_UnitTesting
         {
             PrintWelcomeMessage();
             BankOptions();
-            string userInput = Console.ReadLine();
-            
-            switch (userInput)
+            while (true)
             {
-                case "1":
-                    Console.WriteLine("View Balance");
-                    break;
-                    
-            }
+                Console.Write("> ");
+                string userInput = Console.ReadLine();
 
-            Console.ReadLine();
+                if (userInput == "quit")
+                {
+                    Console.WriteLine("Have a good day!");
+                    Environment.Exit(0);
+                }
+                else if (userInput == "1")
+                {
+                    ViewBalance();
+                }
+                else if (userInput == "2")
+                {
+
+                }
+                else if (userInput == "3")
+                {
+
+                }
+                else
+                {
+                    Console.WriteLine("Please choose a valid number");
+                    BankOptions();
+                }
+
+
+                Console.ReadLine();
+            }
+            
+            
+           
         }
 
         static void PrintWelcomeMessage()
@@ -41,8 +65,18 @@ namespace Lab_02_UnitTesting
             Console.WriteLine("***                                            ***");
             Console.WriteLine("***    Choose a number to continue.            ***");
             Console.WriteLine("**************************************************");
-            Console.Write("> ");
+            
         }
+
+        static decimal ViewBalance()
+        {
+            decimal userBalance = 1000.00M;
+            string formatCurrency = String.Format("{0:C0}", Convert.ToInt32(userBalance));
+            Console.WriteLine("Your balance is: {0}", formatCurrency);
+            return userBalance;
+        }
+
+
 
         
         
