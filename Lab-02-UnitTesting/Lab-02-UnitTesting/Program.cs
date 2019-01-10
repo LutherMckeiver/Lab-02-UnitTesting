@@ -3,7 +3,7 @@
 
 namespace Lab_02_UnitTesting
 {
-    class Program
+    public class Program
     {
 
 
@@ -71,7 +71,7 @@ namespace Lab_02_UnitTesting
 
         }
 
-        static decimal ViewBalance(decimal userBalance)
+        public static decimal ViewBalance(decimal userBalance)
         {
 
             string formatCurrency = String.Format("{0:C0}", Convert.ToInt32(userBalance));
@@ -85,7 +85,7 @@ namespace Lab_02_UnitTesting
             return userBalance;
         }
 
-        static decimal WithdrawMoney(decimal userBalance)
+        public static decimal WithdrawMoney(decimal userBalance)
         {
             Console.WriteLine("How much would you like to withdraw?");
             Console.Write("> ");
@@ -127,7 +127,7 @@ namespace Lab_02_UnitTesting
             return userBalance;
         }
 
-        static decimal DepositMoney(decimal userBalance)
+        public static decimal DepositMoney(decimal userBalance)
         {
             Console.WriteLine("How much would you like to deposit?");
             Console.Write("> ");
