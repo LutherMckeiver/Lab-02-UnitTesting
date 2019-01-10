@@ -1,7 +1,7 @@
 # Unit Test & Documentation
 
 ## Summary
-This is a mock Bank/ATM vconsole application. In this application it gives the user the ability to deposit money, withdraw money, view their current balance, as well as exit the program whenever they want to. 
+This is a mock Bank/ATM console application. In this application it gives the user the ability to deposit money, withdraw money, view their current balance, as well as exit the program whenever they want to. 
 
 We also implemented testing in this project using xUnit, giving us the ability to test all individual methods, so we can improve the programs usability by filling holes we may have missed.
 
