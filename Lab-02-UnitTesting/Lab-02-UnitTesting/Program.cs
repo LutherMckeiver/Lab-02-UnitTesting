@@ -30,7 +30,7 @@ namespace Lab_02_UnitTesting
             string userInput = Console.ReadLine();
             ATMOptions(userInput);
             
-            while (Continue() == "c")
+            while (Continue("c") == true)
             {
                 Console.WriteLine("**************************************************");
                 Console.WriteLine("***    What would you like to do today?        ***");
@@ -83,14 +83,20 @@ namespace Lab_02_UnitTesting
             }
         }
         
-        public static string Continue()
+        public static bool Continue(string userAnswer)
         {
             Console.WriteLine("Do you want to continue, or quit?");
             Console.WriteLine("Press any other key to exit, or type c to continue");
             Console.Write("> ");
-            string userAnswer = Console.ReadLine();
+            userAnswer = Console.ReadLine();
+
+           if (userAnswer == "c")
+            {
+                return true;
+            }
+           else
+                return false;
             
-            return userAnswer;
         }
 
 
